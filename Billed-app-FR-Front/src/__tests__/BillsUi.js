@@ -19,8 +19,9 @@ const row = (bill) => {
     `)
 }
 
+//trie des factures de la plus récente à la plus ancienne
+
 const rows = (data) => {
-  // Modifications pour trier les factures et pour trier le fichier de test
   let returnValue = ""
   if (data && data.length) {
     data.sort((a, b) => (((a.dateForCompare || a.date) < (b.dateForCompare || b.date)) ? 1 : -1))
@@ -33,7 +34,7 @@ const rows = (data) => {
 export default ({ data: bills, loading, error }) => {
 
   const modal = () => (`
-    <div class="modal fade" id="modaleFile" data-testid="modale" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal fade" id="modaleFile" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
         <div class="modal-content">
           <div class="modal-header">

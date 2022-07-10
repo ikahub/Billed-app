@@ -53,7 +53,7 @@ describe('Given I am connected as an Admin and I am on Dashboard Page', () => {
     })
   })
   describe('When pending bill is passed to DashboardUI', () => {
-    test(('Then, it should show button and textArea'), () => {
+    test(('Then it should show button and textArea'), () => {
       const html = DashboardFormUI(billPending)
       document.body.innerHTML = html
       expect(screen.getByText("Accepter")).toBeTruthy()
@@ -62,14 +62,14 @@ describe('Given I am connected as an Admin and I am on Dashboard Page', () => {
     })
   })
   describe('When accepted bill is passed to DashboardUI', () => {
-    test(('Then, it should show admin commentary'), () => {
+    test(('Then it should show admin commentary'), () => {
       const html = DashboardFormUI(billAccepted)
       document.body.innerHTML = html
       expect(screen.getByText(bill.commentAdmin)).toBeTruthy()
     })
   })
   describe('When refused bill is passed to DashboardUI', () => {
-    test(('Then, it should show admin commentary'), () => {
+    test(('Then it should show admin commentary'), () => {
       const html = DashboardFormUI(billrefused)
       document.body.innerHTML = html
       expect(screen.getByText(bill.commentAdmin)).toBeTruthy()
